@@ -206,8 +206,18 @@
 .page-header h1{color:#fff;margin-bottom:var(--space-4);position:relative}
 .page-header p{color:rgba(255,255,255,0.85);font-size:var(--text-lg);position:relative;max-width:600px;margin:0 auto}
 
+@media(max-width: 768px) {
+  .hero__arrows { padding: 0 var(--space-2); }
+  .hero__arrow { width: 40px; height: 40px; }
+  .hero__content { padding: 0 50px; }
+  .hero__title { font-size: 2.5rem; }
+  .hero__subtitle { font-size: 1rem; }
+}
+
 @media(max-width: 480px) {
   .navbar__logo svg.brand-logo { width: 130px; }
   .navbar__lang-btn { padding: 2px 6px; font-size: 10px; }
   .navbar__inner { padding: 0 var(--space-3); }
+  .hero__content { padding: 0 40px; }
+  .hero__arrow { width: 36px; height: 36px; }
 }
