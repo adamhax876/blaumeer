@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
@@ -27,6 +28,7 @@ app.use(helmet({
 }));
 app.use(cors()); // In production, restrict to frontend domain
 app.use(express.json());
+app.use(compression()); // Gzip compression for performance
 
 // Rate Limiting for login
 const loginLimiter = rateLimit({
@@ -360,8 +362,17 @@ app.post('/api/settings', authenticateToken, async (req, res) => {
   }
 });
 
-// Serve frontend static files in production
-app.use(express.static(path.join(process.cwd(), 'dist')));
+// Serve frontend static files in production with Cache-Control
+app.use(express.static(path.join(process.cwd(), 'dist'), {
+  maxAge: '1y', // Cache static assets for 1 year
+  setHeaders: (res, path) => {
+    if (path.endsWith('.html')) {
+      // Don't cache HTML to ensure latest JS/CSS hashes are loaded
+      res.setHeader('Cache-Control', 'no-cache');
+    }
+  }
+}));
+
 app.use((req, res) => {
   res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
 });
