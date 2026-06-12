@@ -10,6 +10,7 @@ import fs from 'fs';
 import * as db from './db.js';
 
 const app = express();
+app.set('trust proxy', 1); // Required for Render reverse proxy rate limiting
 app.use('/uploads', express.static(path.join(process.cwd(), 'public/uploads')));
 
 const storage = multer.diskStorage({

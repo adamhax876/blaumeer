@@ -36,8 +36,8 @@
 .navbar__mobile a:hover{background:var(--blue-50);color:var(--color-primary)}
 
 @media(max-width:1024px){
-  .navbar__links,.navbar__actions .btn{display:none}
-  .navbar__hamburger{display:flex}
+  .navbar__links,.navbar__actions .btn{display:none !important}
+  .navbar__hamburger{display:flex !important}
 }
 
 /* ── Hero ── */
