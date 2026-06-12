@@ -49,7 +49,7 @@ export function renderStars(rating) {
 export function renderLogo(inverted = false) {
   const primary = inverted ? '#ffffff' : '#1d4ed8';
   const accent = inverted ? 'rgba(255,255,255,0.7)' : '#06b6d4';
-  return `<svg viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:52px;direction:ltr">
+  return `<svg class="brand-logo" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="direction:ltr;">
     <defs>
       <linearGradient id="logoGrad${inverted?'I':''}" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
         <stop offset="0%" stop-color="#0ea5e9"/>
@@ -67,8 +67,8 @@ export function renderLogo(inverted = false) {
     <path d="M10 26 Q19 16 28 26 Q37 36 46 26" stroke="rgba(255,255,255,0.5)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
     <circle cx="28" cy="16" r="3.5" fill="${inverted ? '#fff' : '#fbbf24'}" opacity="0.9"/>
     <!-- Text -->
-    <text x="66" y="28" font-family="Outfit, sans-serif" font-weight="800" font-size="24" fill="${primary}" letter-spacing="1">BLAU</text>
-    <text x="66" y="50" font-family="Outfit, sans-serif" font-weight="400" font-size="20" fill="${accent}" letter-spacing="3">MEER</text>
+    <text x="66" y="28" text-anchor="start" font-family="Outfit, sans-serif" font-weight="800" font-size="24" fill="${primary}" letter-spacing="1">BLAU</text>
+    <text x="66" y="50" text-anchor="start" font-family="Outfit, sans-serif" font-weight="400" font-size="20" fill="${accent}" letter-spacing="3">MEER</text>
     <path d="M140 54 Q165 44 190 54" stroke="${inverted ? 'rgba(255,255,255,0.3)' : `url(#waveGrad${inverted?'I':''})`}" stroke-width="2" fill="none" stroke-linecap="round"/>
   </svg>`;
 }
