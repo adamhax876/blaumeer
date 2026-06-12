@@ -19,11 +19,11 @@ const translations = {
     hero_cta_book: 'Book Now',
 
     // Categories
-    cat_cultural: 'Cultural Tours',
+    cat_cultural: 'Historical & Cultural',
     cat_desert: 'Desert Safari',
     cat_sea: 'Sea Trips',
     cat_nile: 'Nile Cruise',
-    cat_hamam: 'Hamam & Massage',
+    cat_hamam: 'Turkish Bath & Spa',
     cat_diving: 'Diving',
 
     // Sections
@@ -155,11 +155,11 @@ const translations = {
     hero_cta_tours: 'استكشف جولاتنا',
     hero_cta_book: 'احجز الآن',
 
-    cat_cultural: 'جولات ثقافية',
+    cat_cultural: 'رحلات تاريخية وثقافية',
     cat_desert: 'سفاري صحراوي',
     cat_sea: 'رحلات بحرية',
     cat_nile: 'رحلات نيلية',
-    cat_hamam: 'حمام ومساج',
+    cat_hamam: 'حمام تركي وسبا',
     cat_diving: 'غوص',
 
     section_categories: 'فئات الجولات',
@@ -280,11 +280,11 @@ const translations = {
     hero_cta_tours: 'Touren Entdecken',
     hero_cta_book: 'Jetzt Buchen',
 
-    cat_cultural: 'Kulturelle Touren',
+    cat_cultural: 'Historie & Kultur',
     cat_desert: 'Wüstensafari',
     cat_sea: 'Seeausflüge',
     cat_nile: 'Nilkreuzfahrt',
-    cat_hamam: 'Hamam & Massage',
+    cat_hamam: 'Türkisches Bad & Spa',
     cat_diving: 'Tauchen',
 
     section_categories: 'Tourkategorien',
