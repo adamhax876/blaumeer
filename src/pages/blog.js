@@ -3,7 +3,7 @@ import { icons } from '../components/icons.js';
 import { blogPosts, faqData } from '../data/testimonials.js';
 
 const lt = (obj) => obj[getLang()] || obj.en || obj;
-const blogImages = ['/images/tour-pyramids.png', '/images/tour-sea.png', '/images/tour-desert.png'];
+const blogImages = ['/images/tour-pyramids.webp', '/images/tour-sea.webp', '/images/tour-desert.webp'];
 
 export function renderBlogPage() {
   return `

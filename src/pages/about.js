@@ -8,7 +8,7 @@ export function renderAboutPage() {
     <div class="page-header"><div class="container"><h1>${t('about_title')}</h1><p>${t('about_subtitle')}</p></div></div>
     <section class="section"><div class="container">
       <div class="about-story animate-on-scroll">
-        <div class="about-story__image"><img src="/images/tour-sea.png" alt="Blau Meer" style="width:100%;height:400px;object-fit:cover;border-radius:var(--radius-2xl)"/></div>
+        <div class="about-story__image"><img src="/images/tour-sea.webp" alt="Blau Meer" style="width:100%;height:400px;object-fit:cover;border-radius:var(--radius-2xl)"/></div>
         <div class="about-story__content">
           <h2>${t('about_story_title')}</h2>
           <p>${t('about_story_p1')}</p>

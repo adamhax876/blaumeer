@@ -35,7 +35,7 @@ export function renderToursPage() {
         </div>
         <div class="tours-page__results">
           ${filtered.map((tour,i)=>{
-            const img = tour.image || tourImages[tour.id] || '/images/tour-pyramids.png';
+            const img = tour.image || tourImages[tour.id] || '/images/tour-pyramids.webp';
             return `<a class="tour-card animate-on-scroll delay-${(i%3)+1}" data-route="/tour/${tour.slug}">
               <div class="tour-card__image"><img src="${img}" alt="${lt(tour.title)}" loading="lazy"/><span class="tour-card__badge badge badge--primary">${t('cat_'+tour.category)}</span></div>
               <div class="tour-card__body">

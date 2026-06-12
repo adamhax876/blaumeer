@@ -9,7 +9,7 @@ export function renderTourDetailPage(params) {
   const tour = tours.find(t => t.slug === params.slug);
   if (!tour) return `<div class="container section"><h1>Tour not found</h1><a class="btn btn--primary" data-route="/tours">${t('explore_tours')}</a></div>`;
 
-  const img = tourImages[tour.id] || '/images/tour-pyramids.png';
+  const img = tourImages[tour.id] || '/images/tour-pyramids.webp';
   const related = tours.filter(t => t.category === tour.category && t.id !== tour.id).slice(0, 3);
 
   const html = `
@@ -63,7 +63,7 @@ export function renderTourDetailPage(params) {
           </div>
         </div>
         ${related.length?`<div class="tour-detail__section"><h2>${t('detail_related')}</h2><div class="related-tours__grid">${related.map(r=>{
-          const rImg = r.image || tourImages[r.id]||'/images/tour-pyramids.png';
+          const rImg = r.image || tourImages[r.id]||'/images/tour-pyramids.webp';
           return `<a class="tour-card" data-route="/tour/${r.slug}"><div class="tour-card__image" style="height:160px"><img src="${rImg}" alt="${lt(r.title)}" loading="lazy"/></div><div class="tour-card__body" style="padding:var(--space-4)"><div class="tour-card__title" style="font-size:var(--text-base)">${lt(r.title)}</div><div class="tour-card__footer" style="padding-top:var(--space-3)"><span class="tour-card__price-amount" style="font-size:var(--text-lg)">€${r.price}</span><span class="btn btn--primary btn--sm">${t('tour_view')}</span></div></div></a>`;
         }).join('')}</div></div>`:''}
       </div>

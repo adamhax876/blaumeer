@@ -7,14 +7,14 @@ import { testimonials, blogPosts } from '../data/testimonials.js';
 const lt = (obj) => obj[getLang()] || obj.en || obj;
 
 const heroSlides = [
-  { img: '/images/hero-1.png', title: () => t('hero_title'), sub: () => t('hero_subtitle') },
-  { img: '/images/hero-2.png', title: () => ({ en:'Crystal Clear Waters', ar:'مياه صافية كالكريستال', de:'Kristallklares Wasser'}[getLang()]), sub: () => ({ en:'Discover the Red Sea\'s hidden paradises', ar:'اكتشف جنات البحر الأحمر المخفية', de:'Entdecken Sie die verborgenen Paradiese des Roten Meeres'}[getLang()]) },
-  { img: '/images/hero-3.png', title: () => ({ en:'Desert Adventures', ar:'مغامرات صحراوية', de:'Wüstenabenteuer'}[getLang()]), sub: () => ({ en:'Experience the magic of the Sahara under the stars', ar:'عش سحر الصحراء تحت النجوم', de:'Erleben Sie die Magie der Sahara unter den Sternen'}[getLang()]) },
+  { img: '/images/hero-1.webp', title: () => t('hero_title'), sub: () => t('hero_subtitle') },
+  { img: '/images/hero-2.webp', title: () => ({ en:'Crystal Clear Waters', ar:'مياه صافية كالكريستال', de:'Kristallklares Wasser'}[getLang()]), sub: () => ({ en:'Discover the Red Sea\'s hidden paradises', ar:'اكتشف جنات البحر الأحمر المخفية', de:'Entdecken Sie die verborgenen Paradiese des Roten Meeres'}[getLang()]) },
+  { img: '/images/hero-3.webp', title: () => ({ en:'Desert Adventures', ar:'مغامرات صحراوية', de:'Wüstenabenteuer'}[getLang()]), sub: () => ({ en:'Experience the magic of the Sahara under the stars', ar:'عش سحر الصحراء تحت النجوم', de:'Erleben Sie die Magie der Sahara unter den Sternen'}[getLang()]) },
 ];
 
-const catImages = { cultural: '/images/tour-pyramids.png', desert: '/images/tour-desert.png', sea: '/images/tour-sea.png', nile: '/images/tour-nile.png', hamam: '/images/tour-hamam.png', diving: '/images/tour-sea.png' };
-const tourImages = { 'pyramids-cairo-day-trip': '/images/tour-pyramids.png', 'luxor-valley-kings': '/images/tour-luxor.png', 'desert-safari-hurghada': '/images/tour-desert.png', 'orange-bay-island': '/images/tour-sea.png', 'nile-cruise-3-nights': '/images/tour-nile.png', 'hamam-massage-hurghada': '/images/tour-hamam.png' };
-const blogImages = ['/images/tour-pyramids.png', '/images/tour-sea.png', '/images/tour-desert.png'];
+const catImages = { cultural: '/images/tour-pyramids.webp', desert: '/images/tour-desert.webp', sea: '/images/tour-sea.webp', nile: '/images/tour-nile.webp', hamam: '/images/tour-hamam.webp', diving: '/images/tour-sea.webp' };
+const tourImages = { 'pyramids-cairo-day-trip': '/images/tour-pyramids.webp', 'luxor-valley-kings': '/images/tour-luxor.webp', 'desert-safari-hurghada': '/images/tour-desert.webp', 'orange-bay-island': '/images/tour-sea.webp', 'nile-cruise-3-nights': '/images/tour-nile.webp', 'hamam-massage-hurghada': '/images/tour-hamam.webp' };
+const blogImages = ['/images/tour-pyramids.webp', '/images/tour-sea.webp', '/images/tour-desert.webp'];
 
 export function renderHomePage() {
   const popularTours = tours.filter(t => t.popular);
@@ -216,7 +216,7 @@ export function renderHomePage() {
 }
 
 function renderTourCard(tour, index) {
-  const img = tour.image || tourImages[tour.id] || '/images/tour-pyramids.png';
+  const img = tour.image || tourImages[tour.id] || '/images/tour-pyramids.webp';
   return `
     <a class="tour-card animate-on-scroll delay-${(index%3)+1}" data-route="/tour/${tour.slug}">
       <div class="tour-card__image">
