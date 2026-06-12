@@ -1,0 +1,202 @@
+/* ── Admin Panel Styles ── */
+.admin-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: var(--gray-50);
+}
+.admin-sidebar {
+  background: var(--bg-primary);
+  border-right: 1px solid var(--gray-200);
+  padding: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+}
+.admin-sidebar__logo {
+  padding: 0 var(--space-6) var(--space-6);
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: var(--space-4);
+}
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0 var(--space-4);
+}
+.admin-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.admin-nav__link:hover, .admin-nav__link.active {
+  background: var(--blue-50);
+  color: var(--color-primary);
+}
+.admin-nav__link svg {
+  width: 20px;
+  height: 20px;
+}
+.admin-main {
+  padding: var(--space-8);
+  overflow-y: auto;
+}
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+.admin-header h1 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+}
+.admin-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-6);
+}
+
+/* Data Tables */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-table th, .admin-table td {
+  padding: var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-100);
+}
+.admin-table th {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.admin-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+/* Forms */
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.admin-form-group {
+  margin-bottom: var(--space-4);
+}
+.admin-form-group.full {
+  grid-column: 1 / -1;
+}
+
+/* Login */
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-ocean-gradient);
+}
+.admin-login__card {
+  background: var(--bg-primary);
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-2xl);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.admin-login__card h1 {
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+}
+
+[dir="rtl"] .admin-table th, [dir="rtl"] .admin-table td {
+  text-align: right;
+}
+[dir="rtl"] .admin-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--gray-200);
+}
+
+/* Mobile Responsiveness for Admin Panel */
+@media (max-width: 768px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-200);
+    padding: var(--space-4) 0 0 0;
+  }
+  
+  [dir="rtl"] .admin-sidebar {
+    border-left: none;
+  }
+
+  .admin-sidebar__logo {
+    padding: 0 var(--space-4) var(--space-4);
+    margin-bottom: 0;
+  }
+
+  .admin-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: var(--space-2) var(--space-4);
+    gap: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .admin-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-nav__link {
+    white-space: nowrap;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .admin-main {
+    padding: var(--space-4);
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-card {
+    padding: var(--space-4);
+    overflow-x: auto;
+  }
+
+  .admin-table th, .admin-table td {
+    white-space: nowrap;
+    padding: var(--space-3) var(--space-2);
+  }
+  
+  /* Stats Cards */
+  .stats {
+    flex-direction: column;
+  }
+}

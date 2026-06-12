@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Do NOT ignore the database so that Render has initial data
+# server/data/database.sqlite
